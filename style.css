@@ -1,0 +1,150 @@
+/* Estilos do corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Estilos do título com letras coloridas */
+h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+/* Estilo para o fundo de corações roxos */
+body {
+    background-image: radial-gradient(circle, rgba(128, 0, 128, 0.3), rgba(0, 0, 0, 1));
+    position: relative;
+}
+
+/* Corações roxos flutuando no fundo */
+body::after {
+    content: '❤️';
+    font-size: 60px;
+    color: purple;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    animation: coracoes 5s linear infinite;
+}
+
+@keyframes coracoes {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50px, 50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Estilos para as cartas */
+.cartas {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.carta {
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.carta:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* Mini corações dentro das cartas */
+.carta::before {
+    content: '❤️';
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: coracoesCartas 2s infinite;
+}
+
+@keyframes coraçõesCartas {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Estilos para a mensagem */
+#mensagem {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Estilo para a chuva de corações e frases */
+.chuva {
+    position: absolute;
+    font-size: 30px;
+    animation: chuvaCores 10s linear infinite;
+}
+
+@keyframes chuvaCores {
+    0% {
+        top: -50px;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+/* Estilo para a animação de descer as frases */
+@keyframes descerFrase {
+    0% {
+        top: -50px;
+    }
+    100% {
+        top: 90%;
+    }
+}
+
+/* Estilo para a assinatura no canto inferior esquerdo */
+#assinatura {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#assinatura i {
+    margin-right: 5px;
+    font-size: 20px;
+    color: yellow;
+}

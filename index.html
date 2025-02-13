@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Choose a card</h1>
+    <div class="cartas">
+        <div class="carta" onclick="mostrarMensagem(1)" style="background-color: #ff6347;">
+            <!-- Carta 1 com fundo vermelho -->
+        </div>
+        <div class="carta" onclick="mostrarMensagem(2)" style="background-color: #32cd32;">
+            <!-- Carta 2 com fundo verde -->
+        </div>
+        <div class="carta" onclick="mostrarMensagem(3)" style="background-color: #1e90ff;">
+            <!-- Carta 3 com fundo azul -->
+        </div>
+        <div class="carta" onclick="mostrarMensagem(4)" style="background-color: #ff1493;">
+            <!-- Carta 4 com fundo rosa -->
+        </div>
+    </div>
+
+    <div id="mensagem" style="display: none;">
+        <p id="recado"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
